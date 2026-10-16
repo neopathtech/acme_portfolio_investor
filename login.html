@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Data Room Login — ACME Fertility &amp; Healthcare Centre</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #061e1d;
+      color: #FFFFFF;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .login-bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 75% 25%, rgba(15, 76, 74, 0.45) 0%, rgba(6, 30, 29, 0.92) 80%),
+                  linear-gradient(180deg, rgba(6, 30, 29, 0.85) 0%, rgba(6, 30, 29, 0.98) 100%),
+                  url('assets/ivf and infertility complex.jpg') center/cover no-repeat;
+      filter: blur(2px);
+      transform: scale(1.02);
+      z-index: 1;
+    }
+
+    .login-wrapper {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(24px, 4vw, 48px) 20px;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(12, 38, 37, 0.88);
+      border: 1px solid rgba(143, 184, 178, 0.28);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: var(--radius-xl);
+      padding: clamp(32px, 5vw, 44px);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+      animation: modalFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .login-brand-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .login-logo-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0F4C4A 0%, #1a6f6b 100%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 24px rgba(15, 76, 74, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .login-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+
+    .login-subtitle {
+      font-size: 13.5px;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+
+    .security-notice-pill {
+      background: rgba(194, 81, 42, 0.15);
+      border: 1px solid rgba(194, 81, 42, 0.35);
+      color: #FFE0D5;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .login-field {
+      margin-bottom: 20px;
+    }
+
+    .login-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #E7F1EF;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .login-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      padding: 14px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-family: inherit;
+      transition: all var(--transition-fast);
+    }
+
+    .login-input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #8FB8B2;
+      box-shadow: 0 0 0 3px rgba(143, 184, 178, 0.25);
+    }
+
+    .login-input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .login-btn-primary {
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: #FFFFFF;
+      border-radius: var(--radius-pill);
+      font-size: 16px;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(194, 81, 42, 0.4);
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .login-btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(194, 81, 42, 0.55);
+    }
+
+    .demo-access-btn {
+      width: 100%;
+      padding: 13px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 700;
+      transition: all var(--transition-fast);
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .demo-access-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: #FFFFFF;
+    }
+
+    .login-footer-info {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 12px;
+      color: #92B5AF;
+      line-height: 1.5;
+    }
+
+    .login-footer-info a {
+      color: #FFE0D5;
+      text-decoration: underline;
+    }
+
+    .login-error-msg {
+      background: rgba(235, 87, 87, 0.2);
+      border: 1px solid #EB5757;
+      color: #FFD2D2;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fullscreen Immersive Background -->
+  <div class="login-bg-overlay"></div>
+
+  <!-- Gateway Wrapper -->
+  <div class="login-wrapper">
+    <div class="login-container">
+      
+      <!-- Logo & Brand Header -->
+      <div class="login-brand-header">
+        <div class="login-logo-badge">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="#FFE0D5" stroke-width="2.5" opacity="0.4"/>
+            <path d="M20 9V31M9 20H31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="20" cy="14" r="3" fill="#FFE0D5"/>
+          </svg>
+        </div>
+        <div style="font-weight: 800; font-size: 21px; letter-spacing: -0.02em; color: #FFFFFF;">
+          acme <span style="font-size: 12px; color: var(--accent); font-weight: 700;">ꯑꯦꯛꯃꯤ</span>
+        </div>
+        <div class="login-title" style="margin-top: 6px;">Institutional Investor Portal</div>
+        <div class="login-subtitle">ACME Fertility &amp; HealthCare Centre · Confidential Data Room</div>
+        <div>
+          <span class="security-notice-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Encrypted &bull; NDA Enforced
+          </span>
+        </div>
+      </div>
+
+      <!-- Error Message Box -->
+      <div class="login-error-msg" id="error-box">
+        Invalid access code or credentials. Please try again or use One-Click Demo Access.
+      </div>
+
+      <!-- Login Form -->
+      <form id="investor-login-form">
+        <div class="login-field">
+          <label class="login-label" for="investor-id">Institutional Email / Investor Key</label>
+          <input type="text" id="investor-id" class="login-input" placeholder="e.g. partner@capital.com or ACME-INV-2026" required autocomplete="username" value="investor@acmefertility.com">
+        </div>
+
+        <div class="login-field">
+          <label class="login-label" for="investor-key">Secure Access Passcode</label>
+          <input type="password" id="investor-key" class="login-input" placeholder="••••••••••••" required autocomplete="current-password" value="acme2026">
+        </div>
+
+        <button type="submit" class="login-btn-primary">
+          <span>Enter Investor Data Room</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" id="quick-demo-btn" class="demo-access-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>One-Click Investor Access (Demo)</span>
+        </button>
+      </form>
+
+      <!-- Compliance & Security Footer -->
+      <div class="login-footer-info">
+        <p>Access is restricted to authorized investment partners, medical syndicates, and financial analysts.</p>
+        <p style="margin-top: 8px;">Compliance with the Assisted Reproductive Technology (ART) Act 2021 and FOGSI clinical governance.</p>
+        <p style="margin-top: 10px;">Direct MD Office: <a href="mailto:contact@acmefertilitycentre.com">contact@acmefertilitycentre.com</a> &bull; +91 69091 58069</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('investor-login-form');
+      const quickDemoBtn = document.getElementById('quick-demo-btn');
+      const errorBox = document.getElementById('error-box');
+
+      function grantAccess(username) {
+        localStorage.setItem('acme_investor_auth', JSON.stringify({
+          authenticated: true,
+          user: username || 'Institutional Investor',
+          timestamp: new Date().toISOString()
+        }));
+        window.location.href = 'index.html';
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const user = document.getElementById('investor-id').value.trim();
+        const pass = document.getElementById('investor-key').value.trim();
+
+        if (user.length > 0 && pass.length > 0) {
+          grantAccess(user);
+        } else {
+          errorBox.style.display = 'block';
+        }
+      });
+
+      quickDemoBtn.addEventListener('click', () => {
+        grantAccess('Strategic Health Partner');
+      });
+    });
+  </script>
+</body>
+</html>

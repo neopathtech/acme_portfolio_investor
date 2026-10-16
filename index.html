@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME Fertility &amp; Healthcare Centre — Institutional Investor &amp; Strategic Partner Portal</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- =========================================================================
+       1. INVESTOR PORTAL TOP BAR & AUTHENTICATION STATE
+       ========================================================================= -->
+    <div class="investor-top-bar">
+        <div class="container investor-bar-inner">
+            <div class="investor-status-tag">
+                <span class="pulse-dot-green"></span>
+                <span><strong>Confidential Data Room:</strong> Institutional Investor &amp; Strategic Partner
+                    Portal</span>
+            </div>
+            <div class="investor-user-info">
+                <span class="investor-badge-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span id="investor-user-name">Strategic Partner</span>
+                </span>
+                <button type="button" id="logout-btn" class="btn-logout" title="Lock session & return to login gateway">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+                    </svg>
+                    <span>Exit Session</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+       2. MAIN NAVIGATION HEADER
+       ========================================================================= -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#hero" class="brand-identity">
+                <div class="brand-symbol-wrap">
+                    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="#FFE0D5" stroke-width="2.5" opacity="0.3" />
+                        <path d="M20 9V31M9 20H31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+                        <circle cx="20" cy="14" r="3" fill="#FFE0D5" />
+                        <path d="M14 26C16 22 24 22 26 26" stroke="#FFE0D5" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="brand-text-block">
+                    <div class="brand-title-group">
+                        <span class="brand-main-name">acme</span>
+                        <span class="brand-meetei">ꯑꯦꯛꯃꯤ</span>
+                    </div>
+                    <span class="brand-subtitle">Investor Relations &bull; Healthcare Infrastructure</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#thesis" class="nav-link">Investment Thesis</a></li>
+                    <li><a href="#kpis" class="nav-link">Clinical KPIs</a></li>
+                    <li><a href="#assets" class="nav-link">Infrastructure Assets</a></li>
+                    <li><a href="#roadmap" class="nav-link">Expansion Roadmap</a></li>
+                    <li><a href="#leadership" class="nav-link">Governance</a></li>
+                    <li><a href="#dataroom" class="nav-link">Virtual Data Room</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="btn-secondary-cta open-termsheet-modal">
+                    <span>Request Term Sheet</span>
+                </button>
+                <a href="#dataroom" class="btn-primary-cta magnetic">
+                    <span>Data Room</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <button type="button" class="mobile-toggle" aria-label="Toggle Menu">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <path d="M3 12h18M3 6h18M3 18h18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="site-nav-mobile">
+            <a href="#thesis" class="nav-link">Investment Thesis</a>
+            <a href="#kpis" class="nav-link">Clinical KPIs</a>
+            <a href="#assets" class="nav-link">Infrastructure Assets</a>
+            <a href="#roadmap" class="nav-link">Expansion Roadmap</a>
+            <a href="#leadership" class="nav-link">Governance</a>
+            <a href="#dataroom" class="nav-link">Virtual Data Room</a>
+            <button type="button" class="btn-primary-cta open-termsheet-modal"
+                style="width: 100%; justify-content: center;">Request Term Sheet</button>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+       3. IMAGE-DOMINANT HERO SECTION FOR INVESTORS
+       ========================================================================= -->
+    <section class="hero-section" id="hero">
+        <div class="hero-ambient" aria-hidden="true">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-2"></span>
+            <span class="blob blob-3"></span>
+        </div>
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Hero Text & Investment Case -->
+                <div class="hero-content">
+                    <div class="hero-badge-strip reveal">
+                        <span class="badge-tag highlight">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            Manyata Certified · FOGSI Benchmark
+                        </span>
+                        <span class="badge-tag">Prime Healthcare Real Estate · Imphal East</span>
+                    </div>
+
+                    <h1 class="hero-title reveal" data-delay="80">
+                        Pioneering reproductive medicine in Northeast India with <span class="accent">sustainable
+                            clinical &amp; financial excellence</span>
+                    </h1>
+
+                    <p class="hero-description reveal" data-delay="160">
+                        ACME Fertility &amp; Healthcare Centre combines an established 10-year operational footprint, an
+                        industry-leading 84.6% minimally invasive endoscopic conversion rate, on-site cryogenic
+                        bio-banking, and Manyata national accreditation into a highly profitable, scalable clinical
+                        ecosystem.
+                    </p>
+
+                    <div class="hero-actions reveal" data-delay="240">
+                        <button type="button" class="btn-hero-primary magnetic open-termsheet-modal">
+                            <span>Request Investment Memorandum</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <a href="#dataroom" class="btn-hero-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            <span>Explore Data Room</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-cred-bar reveal" data-delay="320">
+                        <div class="cred-item">
+                            <div class="cred-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <span>10+ Years Operational Track Record</span>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                            </div>
+                            <span>ART (Regulation) Act 2021 Compliant</span>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <span>Zero Long-Term Debt on Core Building</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image-Dominant Infrastructure Showcase -->
+                <div class="hero-visual-showcase reveal" data-delay="200">
+                    <!-- Main Card -->
+                    <div class="hero-main-card" id="hero-main-card">
+                        <img id="hero-main-img" src="assets/ivf and infertility complex.jpg"
+                            alt="ACME Fertility & Infertility Complex in Imphal">
+                        <div class="hero-card-overlay">
+                            <span class="hero-overlay-tag">Asset Profile: Freehold Healthcare Real Estate</span>
+                            <h2 class="hero-overlay-caption" id="hero-main-caption">4-Storey Specialized Reproductive
+                                Facility, Palace Compound</h2>
+                        </div>
+                        <div class="hero-card-shine" aria-hidden="true"></div>
+                    </div>
+
+                    <!-- Floating Glass Badge 1: Manyata Certificate -->
+                    <div class="floating-glass-card top-right cert-trigger" style="cursor: pointer;"
+                        title="Inspect Manyata Certificate">
+                        <img src="assets/Manyata-Certificate_1.webp" alt="Manyata Certificate"
+                            class="cert-mini-preview">
+                        <div>
+                            <div class="float-stat-number" style="font-size: 16px; color: var(--accent);">Manyata
+                                Certified</div>
+                            <div class="float-stat-label">FOGSI Quality Standards &bull; Click to audit</div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Glass Badge 2: Key Operational Metric -->
+                    <div class="floating-glass-card bottom-left">
+                        <div class="float-stat-ring">
+                            <svg viewBox="0 0 44 44" class="ring-svg" aria-hidden="true">
+                                <circle cx="22" cy="22" r="19" class="ring-track" />
+                                <circle cx="22" cy="22" r="19" class="ring-fill" id="ring-fill" />
+                            </svg>
+                            <span>84.6%</span>
+                        </div>
+                        <div>
+                            <div class="float-stat-number">Endoscopic Ratio</div>
+                            <div class="float-stat-label">1,196 of 1,414 Surgeries Minimally Invasive</div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Switcher Thumbnails Strip -->
+                    <div class="hero-thumb-strip">
+                        <div class="hero-thumb-item active" data-src="assets/ivf and infertility complex.jpg"
+                            data-caption="4-Storey Specialized Reproductive Facility, Palace Compound">
+                            <img src="assets/ivf and infertility complex.jpg" alt="Complex">
+                        </div>
+                        <div class="hero-thumb-item" data-src="assets/ivf lab.jpg"
+                            data-caption="Class 10,000 Cleanroom Embryology Laboratory">
+                            <img src="assets/ivf lab.jpg" alt="IVF Lab">
+                        </div>
+                        <div class="hero-thumb-item" data-src="assets/operation theatre 1.jpg"
+                            data-caption="Class 100 Modular Laminar-Flow Operation Theatre 1">
+                            <img src="assets/operation theatre 1.jpg" alt="Operation Theatre">
+                        </div>
+                        <div class="hero-thumb-item" data-src="assets/cryobank.jpg"
+                            data-caption="Liquid Nitrogen Cryobank & Vitrification Storage Vault">
+                            <img src="assets/cryobank.jpg" alt="Cryobank">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       4. FINANCIAL & OPERATIONAL KPIS STRIP
+       ========================================================================= -->
+    <section class="proof-section" id="kpis">
+        <div class="container">
+            <div class="proof-cards-grid">
+                <!-- Metric 1 -->
+                <div class="proof-card reveal">
+                    <div>
+                        <div class="proof-metric"><span class="counter" data-target="300" data-suffix="+">0</span></div>
+                        <div class="proof-card-label">Documented IVF &amp; ICSI cycles conducted with 30% baseline
+                            clinical take-home pregnancy in &lt;30y cohort</div>
+                    </div>
+                    <div class="proof-footnote">Embryological Audit Verified</div>
+                </div>
+
+                <!-- Metric 2 -->
+                <div class="proof-card reveal" data-delay="100">
+                    <div>
+                        <div class="proof-metric"><span class="counter" data-target="1196" data-format="comma">0</span>
+                        </div>
+                        <div class="proof-card-label">of <span class="counter" data-target="1414"
+                                data-format="comma">0</span> gynaecological surgeries completed via minimally invasive
+                            keyhole endoscopy (84.6% conversion)</div>
+                    </div>
+                    <div class="proof-footnote accent">High Operating Margin per OT Hour</div>
+                </div>
+
+                <!-- Metric 3 -->
+                <div class="proof-card reveal" data-delay="200">
+                    <div>
+                        <div class="proof-metric proof-metric-text">Multi-Stream</div>
+                        <div class="proof-card-label">Diversified revenues spanning IVF cycles, cryopreservation annual
+                            fees, endoscopy, and obstetric delivery packages</div>
+                    </div>
+                    <div class="proof-footnote">High Retention &amp; Referral Velocity</div>
+                </div>
+
+                <!-- Metric 4: Manyata Certification Card -->
+                <div class="proof-card featured-cert reveal" data-delay="300">
+                    <div>
+                        <div class="proof-metric">Manyata Certified</div>
+                        <div class="proof-card-label">Accredited by FOGSI for clinical protocols, qualifying for tier-1
+                            cashless insurance empanelment and ART Act compliance</div>
+                    </div>
+                    <div class="cert-thumbnail-action cert-trigger">
+                        <span>Audit Full Accreditation Dossier</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cashless Insurance Empanelment (Revenue Predictability) -->
+            <div class="insurance-strip reveal">
+                <div class="insurance-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>Institutional Insurance Partners &bull; Cashless Desk</span>
+                </div>
+                <div class="insurance-marquee">
+                    <div class="insurance-marquee-track">
+                        <div class="insurance-pill"><span class="dot"></span><span>Ayushman Bharat (PM-JAY Government
+                                Scheme)</span></div>
+                        <div class="insurance-pill"><span class="dot"></span><span>Aditya Birla Capital Health</span>
+                        </div>
+                        <div class="insurance-pill"><span class="dot"></span><span>Care Health Insurance</span></div>
+                        <div class="insurance-pill"><span class="dot"></span><span>Pre-Auth TPA Desk for Instant
+                                Approvals</span></div>
+                        <!-- duplicated for seamless loop -->
+                        <div class="insurance-pill" aria-hidden="true"><span class="dot"></span><span>Ayushman Bharat
+                                (PM-JAY Government Scheme)</span></div>
+                        <div class="insurance-pill" aria-hidden="true"><span class="dot"></span><span>Aditya Birla
+                                Capital Health</span></div>
+                        <div class="insurance-pill" aria-hidden="true"><span class="dot"></span><span>Care Health
+                                Insurance</span></div>
+                        <div class="insurance-pill" aria-hidden="true"><span class="dot"></span><span>Pre-Auth TPA Desk
+                                for Instant Approvals</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       5. CORE INVESTMENT THESIS & STRATEGIC MOATS
+       ========================================================================= -->
+    <section class="thesis-section" id="thesis">
+        <div class="container">
+            <div style="max-width: 780px;">
+                <span class="section-tag gold reveal">Investment Thesis</span>
+                <h2 class="section-title reveal" data-delay="80">A defensible moat in an <em
+                        class="serif-em">underserved</em> regional healthcare market</h2>
+                <p class="section-desc reveal" data-delay="160">
+                    Northeast India faces a growing reproductive health and infertility burden, yet patients have
+                    historically been forced to travel to Delhi, Kolkata, or Guwahati. ACME captures this captive demand
+                    through accredited infrastructure, local cultural trust, and clinical excellence.
+                </p>
+            </div>
+
+            <div class="thesis-grid">
+                <!-- Pillar 1 -->
+                <div class="thesis-card reveal">
+                    <div class="thesis-icon-box">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <span class="thesis-index">01</span>
+                    <h3 class="thesis-title">High Barrier-to-Entry Infrastructure</h3>
+                    <p class="thesis-body">
+                        Commissioning compliant ART cleanrooms, laminar-flow theatres, and cryogenic tanks requires
+                        complex capital and clinical licensing under the ART Act 2021. ACME possesses fully operational,
+                        compliant infrastructure with zero ramp-up lag.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="thesis-card reveal" data-delay="100">
+                    <div class="thesis-icon-box">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <span class="thesis-index">02</span>
+                    <h3 class="thesis-title">High-Margin Recurring Revenue Streams</h3>
+                    <p class="thesis-body">
+                        Unlike single-treatment clinics, our revenue is balanced across IVF cycles, annual
+                        cryopreservation storage annuities, high-margin keyhole laparoscopic procedures, obstetric
+                        deliveries, neonatal ICU care, and OPD consultations.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="thesis-card reveal" data-delay="200">
+                    <div class="thesis-icon-box">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <span class="thesis-index">03</span>
+                    <h3 class="thesis-title">Physician-Led Institutional Brand</h3>
+                    <p class="thesis-body">
+                        Led by Dr. James Elangbam, one of the state's most sought-after endoscopic gynaecologists and
+                        reproductive physicians, creating immense patient loyalty, organic word-of-mouth patient
+                        referrals, and strong clinical credibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       6. PHYSICAL INFRASTRUCTURE & ASSET VALUATION (IMAGE-DOMINANT)
+       ========================================================================= -->
+    <section class="assets-section" id="assets">
+        <div class="container">
+            <div class="section-head-wrap">
+                <div>
+                    <span class="section-tag reveal">Asset Portfolio</span>
+                    <h2 class="section-title reveal" data-delay="80">Physical capital assets &amp; clinical facilities
+                    </h2>
+                    <p class="section-desc reveal" data-delay="160">Audit the tangible infrastructure, specialized
+                        clinical machinery, and operational assets located at our facility in Palace Compound, Imphal
+                        East.</p>
+                </div>
+                <button type="button" class="btn-primary-cta open-termsheet-modal reveal" data-delay="240">
+                    <span>Request Asset Register &amp; Cap Table</span>
+                </button>
+            </div>
+
+            <!-- Asset Filters -->
+            <div class="asset-filters reveal" data-delay="120">
+                <button type="button" class="filter-btn active" data-filter="all">All Capital Assets (8)</button>
+                <button type="button" class="filter-btn" data-filter="embryo">Embryology &amp; Cryo</button>
+                <button type="button" class="filter-btn" data-filter="surgical">Surgical Theatres</button>
+                <button type="button" class="filter-btn" data-filter="inpatient">Inpatient &amp; Recovery</button>
+                <button type="button" class="filter-btn" data-filter="critical">ICU &amp; Emergency</button>
+            </div>
+
+            <!-- Assets Gallery Grid -->
+            <div class="assets-gallery-grid">
+                <!-- Asset 1: The Hospital Building -->
+                <div class="facility-card reveal" data-category="inpatient">
+                    <img src="assets/ivf and infertility complex.jpg" alt="ACME Fertility Complex Exterior">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Main Hospital Complex</h3>
+                        <span class="facility-meta">4-Storey Freehold Healthcare Building &bull; Palace Compound</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 2: IVF Embryology Cleanroom -->
+                <div class="facility-card reveal" data-delay="80" data-category="embryo">
+                    <img src="assets/ivf lab.jpg" alt="Class 10,000 Cleanroom Embryology Lab">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Class 10,000 IVF Cleanroom</h3>
+                        <span class="facility-meta">HEPA Positive-Pressure Air &bull; Narishige Micromanipulators</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 3: Operation Theatre 1 -->
+                <div class="facility-card reveal" data-delay="160" data-category="surgical">
+                    <img src="assets/operation theatre 1.jpg" alt="Modular Laminar Flow Operation Theatre 1">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Modular Laminar Theatre 1</h3>
+                        <span class="facility-meta">Class 100 Airflow &bull; HD Laparoscopic Visual Towers</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 4: Cryobank Storage Vault -->
+                <div class="facility-card reveal" data-delay="240" data-category="embryo">
+                    <img src="assets/cryobank.jpg" alt="Cryobank liquid nitrogen tanks">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Cryobank Vitrification Vault</h3>
+                        <span class="facility-meta">Liquid N2 Biological Storage &bull; Recurring Annual Fees</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 5: Endoscopy Suite -->
+                <div class="facility-card reveal" data-category="surgical">
+                    <img src="assets/keyhole gynae surgery.jpg" alt="Keyhole endoscopy theatre suite">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Keyhole Endoscopy Suite</h3>
+                        <span class="facility-meta">Minimally Invasive Pelvic Surgery &bull; Day-Care High
+                            Turnover</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 6: Inpatient Maternity Suites -->
+                <div class="facility-card reveal" data-delay="80" data-category="inpatient">
+                    <img src="assets/maternity ward.jpg" alt="Inpatient maternity recovery ward">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Inpatient Maternity Suites</h3>
+                        <span class="facility-meta">Private &amp; Semi-Private Beds &bull; High Bed Utilization</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 7: Neonatal & Maternal ICU -->
+                <div class="facility-card reveal" data-delay="160" data-category="critical">
+                    <img src="assets/icu.jpg" alt="Intensive care unit with phototherapy incubators">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Neonatal &amp; Adult ICU</h3>
+                        <span class="facility-meta">Incubators &bull; Multiparameter Monitoring &bull; 24/7
+                            Intensivist</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Asset 8: Central Reception & OPD Bays -->
+                <div class="facility-card reveal" data-delay="240" data-category="inpatient">
+                    <img src="assets/header.jpg" alt="Hospital Reception and Entrance">
+                    <div class="facility-overlay">
+                        <h3 class="facility-title">Central Reception &amp; OPD</h3>
+                        <span class="facility-meta">Digital Patient Registration &bull; TPA Insurance Desk</span>
+                    </div>
+                    <div class="facility-expand-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       7. CAPITAL ALLOCATION & EXPANSION ROADMAP (2026 - 2030)
+       ========================================================================= -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="container">
+            <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+                <span class="section-tag gold reveal">Growth Strategy</span>
+                <h2 class="section-title reveal" data-delay="80">Capital allocation &amp; regional scale roadmap</h2>
+                <p class="section-desc reveal" data-delay="160" style="margin: 12px auto 0;">Deploying expansion capital
+                    into high-margin diagnostic insourcing and regional hub-and-spoke satellite outpatient clinics.</p>
+            </div>
+
+            <div class="roadmap-grid">
+                <!-- Phase 1 -->
+                <div class="roadmap-card reveal">
+                    <span class="roadmap-phase-tag">Phase 1 &bull; 2026</span>
+                    <h3 class="roadmap-title">In-House Genetics &amp; PGT-A</h3>
+                    <p class="roadmap-desc">
+                        Commissioning next-generation sequencing (NGS) for pre-implantation genetic testing and
+                        non-invasive prenatal screening (NIPS), capturing high-margin genetic testing revenues currently
+                        sent out-of-state.
+                    </p>
+                    <div class="roadmap-irr">Projected Margin Accretion: +18%</div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="roadmap-card reveal" data-delay="100">
+                    <span class="roadmap-phase-tag">Phase 2 &bull; 2027</span>
+                    <h3 class="roadmap-title">Regional Satellite Spoke Network</h3>
+                    <p class="roadmap-desc">
+                        Opening low-capex outpatient consultation &amp; ultrasound monitoring hubs in Churachandpur,
+                        Senapati, and Kohima (Nagaland) to funnel high-ticket IVF and laparoscopic surgeries directly
+                        into the Imphal hospital.
+                    </p>
+                    <div class="roadmap-irr">Target Cycle Uplift: +65% Volume</div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="roadmap-card reveal" data-delay="200">
+                    <span class="roadmap-phase-tag">Phase 3 &bull; 2028</span>
+                    <h3 class="roadmap-title">Aesthetic Gynaecology &amp; Pelvic Health</h3>
+                    <p class="roadmap-desc">
+                        Launching a dedicated cosmetic gynaecology, pelvic floor reconstruction, and laser rejuvenation
+                        wing targeting high-paying private pay and medical tourism demographics across Northeast India.
+                    </p>
+                    <div class="roadmap-irr">Target Payor Mix: 100% Cash / Private</div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="roadmap-card reveal" data-delay="300">
+                    <span class="roadmap-phase-tag">Phase 4 &bull; 2029-30</span>
+                    <h3 class="roadmap-title">Endoscopy &amp; ART Training Academy</h3>
+                    <p class="roadmap-desc">
+                        Establishing a formal academic fellowship in collaboration with international endoscopic
+                        societies to train regional doctors, simultaneously generating tuition revenue and securing
+                        junior clinical talent.
+                    </p>
+                    <div class="roadmap-irr">Strategic Talent Moat &bull; Institutional Prestige</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       8. EXECUTIVE MEDICAL GOVERNANCE & CLINICAL DIRECTORS
+       ========================================================================= -->
+    <section class="leadership-section" id="leadership">
+        <div class="container">
+            <div class="section-head-wrap">
+                <div>
+                    <span class="section-tag reveal">Governance &amp; Founders</span>
+                    <h2 class="section-title reveal" data-delay="80">Clinical leadership &amp; executive directors</h2>
+                    <p class="section-desc reveal" data-delay="160">Managed by seasoned clinician-founders combining
+                        deep local authority, surgical mastery, and adherence to national governance standards.</p>
+                </div>
+                <button type="button" class="btn-primary-cta open-termsheet-modal reveal" data-delay="240">
+                    <span>Schedule Director Meeting</span>
+                </button>
+            </div>
+
+            <div class="leadership-grid">
+                <!-- Lead Founder: Dr. James Elangbam -->
+                <div class="doctor-card featured reveal">
+                    <div class="doctor-photo-wrap">
+                        <img src="assets/dr james.jpg" alt="Dr. James Elangbam, Managing Director & Founder">
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-specialty-badge">Founder &amp; Managing Director</span>
+                        <h3 class="doctor-name">Dr. James Elangbam</h3>
+                        <div class="doctor-qual">MBBS, DNB (Obstetrics &amp; Gynaecology)</div>
+                        <p class="doctor-role">
+                            Managing Director, Chief Consultant, Fertility Physician &amp; Endoscopic Gynaecologist.
+                            Directs institutional strategy, advanced surgical conversions (1,196+ keyhole procedures),
+                            and clinical protocol compliance under the ART Act.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Co-Director: Dr. Mrinalini Konjengbam -->
+                <div class="doctor-card reveal" data-delay="120">
+                    <div class="doctor-photo-wrap">
+                        <img src="assets/dr mrinalini.jpg" alt="Dr. Mrinalini Konjengbam, Medical Superintendent">
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-specialty-badge">Medical Superintendent &bull; COO</span>
+                        <h3 class="doctor-name">Dr. Mrinalini Konjengbam</h3>
+                        <div class="doctor-qual">MBBS, MS (Human Anatomy)</div>
+                        <p class="doctor-role">
+                            Medical Superintendent &amp; Chief Operating Officer. Oversees embryology cleanroom QA/QC,
+                            clinical audit benchmarks, laboratory instrumentation, and Manyata accreditation renewals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Co-Director: Dr. Monika Naorem -->
+                <div class="doctor-card reveal" data-delay="240">
+                    <div class="doctor-photo-wrap">
+                        <img src="assets/dr monika.jpg" alt="Dr. Monika Naorem, Consultant Anaesthesiologist">
+                    </div>
+                    <div class="doctor-body">
+                        <span class="doctor-specialty-badge">Anaesthesiology &bull; Critical Care</span>
+                        <h3 class="doctor-name">Dr. Monika Naorem</h3>
+                        <div class="doctor-qual">MBBS, Diploma in Anaesthesiology</div>
+                        <p class="doctor-role">
+                            Consultant Anaesthesiologist &amp; Critical Care Director. Leads theatre anaesthesia
+                            protocols, surgical patient risk stratification, post-operative analgesic recovery, and ICU
+                            operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       9. FOUNDER ADDRESS / DR. JAMES SPEAKS (INSTITUTIONAL VISION)
+       ========================================================================= -->
+    <section class="perspectives-section" id="james">
+        <div class="perspectives-ambient" aria-hidden="true">
+            <span class="blob blob-p1"></span>
+            <span class="blob blob-p2"></span>
+        </div>
+        <div class="container">
+            <div style="max-width: 780px;">
+                <span class="section-tag light reveal">Founder's Briefing</span>
+                <h2 class="section-title light reveal" data-delay="80">Perspectives from our Managing Director</h2>
+                <p class="section-desc light reveal" data-delay="160">Dr. James Elangbam on building scalable clinical
+                    moats, patient trust, and institutional longevity in Northeast India.</p>
+            </div>
+
+            <div class="perspectives-layout">
+                <!-- Speaker Photo & Bio Card -->
+                <div class="speaker-profile-card reveal">
+                    <div class="speaker-photo-wrap">
+                        <img src="assets/dr james speaking.jpg"
+                            alt="Dr. James Elangbam speaking on institutional healthcare growth">
+                    </div>
+                    <div class="speaker-card-info">
+                        <div class="speaker-name">Dr. James Elangbam</div>
+                        <div class="speaker-title">Managing Director &bull; Founder</div>
+                        <p class="speaker-quote">
+                            &ldquo;Healthcare value creation is fundamentally rooted in clinical fidelity. When success
+                            rates and patient safety are rigorous, financial sustainability and compounding capital
+                            returns follow naturally.&rdquo;
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Editorial Articles & Interactive Media -->
+                <div>
+                    <!-- Editorial Pull Quote -->
+                    <div class="editorial-quote-wrap reveal" data-delay="100">
+                        <blockquote class="editorial-quote">
+                            &ldquo;Our expansion thesis is built on unmatched surgical quality and laboratory
+                            discipline. We are building the Northeast's most reliable, technologically advanced
+                            reproductive healthcare network.&rdquo;
+                        </blockquote>
+                        <div class="editorial-attribution">
+                            <span class="attribution-rule"></span>
+                            <span>Dr. James Elangbam &bull; Strategic Vision</span>
+                        </div>
+                    </div>
+
+                    <!-- 3 Editorial Opinion Cards -->
+                    <div class="articles-grid">
+                        <div class="article-card reveal" data-delay="120">
+                            <span class="article-tag">Strategy &bull; Quality Moats</span>
+                            <h3 class="article-title">Why FOGSI Manyata certification drives EBITDA</h3>
+                            <p class="article-excerpt">How standardizing clinical pathways mitigates malpractice risk
+                                and unlocks preferred reimbursement tiers with national insurers.</p>
+                        </div>
+
+                        <div class="article-card reveal" data-delay="220">
+                            <span class="article-tag">Operations &bull; Endoscopy</span>
+                            <h3 class="article-title">Economics of 84.6% keyhole surgery conversion</h3>
+                            <p class="article-excerpt">Minimally invasive operations drastically compress
+                                length-of-stay, maximizing theatre turnover and gross margins per bed.</p>
+                        </div>
+
+                        <div class="article-card reveal" data-delay="320">
+                            <span class="article-tag">Scale &bull; Regional Demand</span>
+                            <h3 class="article-title">The untapped fertility catchment of Northeast India</h3>
+                            <p class="article-excerpt">Analyzing demographic supply deficits across Manipur, Nagaland,
+                                and Assam, and the satellite hub growth model.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card & Direct Inquiry -->
+                    <div class="perspectives-interactive-row">
+                        <div class="video-interview-card open-video-modal reveal" data-delay="160"
+                            title="Click to watch Founder briefing">
+                            <div class="video-card-content">
+                                <div class="video-play-btn">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                                <div class="video-card-text">
+                                    <div class="v-title">Watch: Founder Executive Presentation</div>
+                                    <div class="v-sub">Dr. James Elangbam on 2026-2030 Capital Roadmap &bull; 6 min
+                                        video</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ask-james-card reveal" data-delay="260">
+                            <div class="ask-james-title">Executive Inquiry</div>
+                            <div class="ask-james-desc">Have a specific financial, clinical audit, or structuring
+                                question for Dr. James?</div>
+                            <button type="button" class="btn-ask-james open-termsheet-modal">Submit Question to
+                                MD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       10. VIRTUAL DATA ROOM & DUE DILIGENCE DOSSIER
+       ========================================================================= -->
+    <section class="dataroom-section" id="dataroom">
+        <div class="container">
+            <div class="dataroom-box reveal">
+                <div>
+                    <span class="section-tag light">Virtual Data Room</span>
+                    <h2 class="dataroom-title">Institutional Due Diligence Data Room</h2>
+                    <p class="dataroom-lead">
+                        Accredited investment funds and strategic healthcare operators may access our compliance
+                        documentation, audited financials, and regulatory filings below:
+                    </p>
+
+                    <div class="dataroom-files-grid">
+                        <div class="dataroom-file-item" data-doc="Audited Financial Statements FY21-FY25"
+                            style="cursor: pointer;" title="Click to download secure copy">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE0D5"
+                                stroke-width="2.2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            <span>Audited Financials (5-Yr P&amp;L)</span>
+                        </div>
+
+                        <div class="dataroom-file-item cert-trigger" style="cursor: pointer;"
+                            title="Inspect Manyata Accreditation">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE0D5"
+                                stroke-width="2.2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <span>Manyata FOGSI Certificate</span>
+                        </div>
+
+                        <div class="dataroom-file-item" data-doc="ART Act 2021 State Registration"
+                            style="cursor: pointer;" title="Click to download secure copy">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE0D5"
+                                stroke-width="2.2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span>ART Act 2021 Clinic License</span>
+                        </div>
+
+                        <div class="dataroom-file-item" data-doc="5-Year Surgical & Clinical Audit Deck"
+                            style="cursor: pointer;" title="Click to download secure copy">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFE0D5"
+                                stroke-width="2.2">
+                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                                <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                            </svg>
+                            <span>Clinical &amp; Surgical Audit Deck</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Term Sheet Request Card -->
+                <div class="dataroom-form-card">
+                    <div class="dataroom-form-title">Request Direct MD Meeting</div>
+                    <p class="dataroom-form-sub">Direct line to Dr. James Elangbam and our institutional transaction
+                        advisors.</p>
+
+                    <button type="button" class="btn-primary-cta open-termsheet-modal"
+                        style="width: 100%; justify-content: center; padding: 14px;">
+                        <span>Open Investment Inquiry Form</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <div class="dataroom-contact">
+                        Direct Office: <a href="tel:+916909158069">+91 69091 58069</a> &bull;
+                        contact@acmefertilitycentre.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+       11. INSTITUTIONAL FOOTER
+       ========================================================================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Col 1 -->
+                <div>
+                    <div class="brand-identity" style="filter: brightness(1.2);">
+                        <div class="brand-symbol-wrap" style="background: rgba(255,255,255,0.15);">
+                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="18" stroke="#FFE0D5" stroke-width="2.5" opacity="0.4" />
+                                <path d="M20 9V31M9 20H31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="brand-text-block">
+                            <div class="brand-title-group">
+                                <span class="brand-main-name" style="color: #FFFFFF;">acme</span>
+                                <span class="brand-meetei" style="color: #F2B8A2;">ꯑꯦꯛꯃꯤ</span>
+                            </div>
+                            <span class="brand-subtitle" style="color: #CFE3DF;">Investor Relations</span>
+                        </div>
+                    </div>
+                    <p class="footer-brand-desc">
+                        ACME Fertility &amp; Healthcare Centre is an accredited reproductive hospital and surgical
+                        endoscopy institute headquartered in Imphal, Manipur.
+                    </p>
+                </div>
+
+                <!-- Col 2: Institutional -->
+                <div>
+                    <div class="footer-heading">Due Diligence</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#thesis">&rarr; Investment Thesis</a></li>
+                        <li><a href="#kpis">&rarr; Operational KPIs</a></li>
+                        <li><a href="#assets">&rarr; Infrastructure Valuation</a></li>
+                        <li><a href="#roadmap">&rarr; 2026-2030 Roadmap</a></li>
+                        <li><a href="#leadership">&rarr; Medical Governance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Regulatory & Accreditation -->
+                <div>
+                    <div class="footer-heading">Regulatory Filings</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#kpis">&rarr; FOGSI Manyata Status</a></li>
+                        <li><a href="#dataroom">&rarr; ART Act 2021 Licensure</a></li>
+                        <li><a href="#kpis">&rarr; PM-JAY Empanelment</a></li>
+                        <li><a href="#dataroom">&rarr; Surgical Audit Register</a></li>
+                        <li><a href="#james">&rarr; Founder Perspectives</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Transaction Desk -->
+                <div>
+                    <div class="footer-heading">Transaction Desk</div>
+                    <p class="footer-address">
+                        Hiyang Hiren Leirak, Palace Compound, Imphal East, Manipur – 795005
+                    </p>
+                    <div class="footer-contact">
+                        <a href="tel:+916909158069">+91 69091 58069</a>
+                        <span>contact@acmefertilitycentre.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 ACME Fertility &amp; Healthcare Centre. Confidential Investment Memorandum.</span>
+                <span>Powered by Neopath Technologies</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- =========================================================================
+       12. INTERACTIVE MODALS
+       ========================================================================= -->
+
+    <!-- Modal 1: Term Sheet & Investment Inquiry Modal -->
+    <div class="modal-backdrop" id="termsheet-modal">
+        <div class="modal-window">
+            <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="section-tag gold">Confidential Transaction Desk</span>
+                <h2 class="modal-heading">Request Term Sheet &amp; Dossier</h2>
+                <p class="modal-sub">Direct coordination with Dr. James Elangbam, MD &amp; Founder.</p>
+            </div>
+            <div class="modal-body">
+                <form id="termsheet-form">
+                    <div class="form-group">
+                        <label class="form-label" for="inquiry-name">Principal Investor / Partner Name *</label>
+                        <input type="text" id="inquiry-name" class="form-input" placeholder="e.g. Anand Sharma"
+                            required>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-firm">Investment Fund / Entity *</label>
+                            <input type="text" id="inquiry-firm" class="form-input"
+                                placeholder="e.g. Apex Healthcare Ventures" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-type">Partnership Type</label>
+                            <select id="inquiry-type" class="form-select">
+                                <option value="Growth Capital / Equity">Growth Capital / Equity</option>
+                                <option value="Debt / Equipment Financing">Debt / Equipment Financing</option>
+                                <option value="Strategic Clinical Syndicate">Strategic Clinical Syndicate</option>
+                                <option value="Satellite Center Joint Venture">Satellite Hub JV</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-email">Institutional Email *</label>
+                            <input type="email" id="inquiry-email" class="form-input" placeholder="partner@fund.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-phone">Phone / WhatsApp *</label>
+                            <input type="tel" id="inquiry-phone" class="form-input" placeholder="+91 98765 43210"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="inquiry-notes">Proposed Check Size &amp; Timelines</label>
+                        <textarea id="inquiry-notes" class="form-textarea"
+                            placeholder="Detail your investment thesis, target ticket size, and preferred due diligence schedule..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Dispatch Confidential Term Sheet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Fullscreen Facilities & Manyata Certificate Lightbox -->
+    <div class="modal-backdrop" id="lightbox-modal">
+        <div class="modal-window lightbox-modal">
+            <button type="button" class="modal-close-btn lightbox-close" aria-label="Close lightbox">&times;</button>
+
+            <div class="lightbox-image-container">
+                <img id="lightbox-img" src="" alt="Asset Inspection">
+            </div>
+
+            <div class="lightbox-caption-bar">
+                <div>
+                    <div class="lightbox-title" id="lightbox-title">Asset Inspection</div>
+                    <div class="lightbox-desc" id="lightbox-desc">ACME Fertility and Healthcare Centre, Imphal</div>
+                </div>
+                <div class="lightbox-nav">
+                    <button type="button" id="lightbox-prev" class="lightbox-nav-btn" title="Previous Image">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button type="button" id="lightbox-next" class="lightbox-nav-btn" title="Next Image">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Founder Video Briefing Modal -->
+    <div class="modal-backdrop" id="video-modal">
+        <div class="modal-window video-modal-window">
+            <button type="button" class="modal-close-btn lightbox-close" aria-label="Close video">&times;</button>
+            <div class="video-stage">
+                <img src="assets/dr james speaking.jpg" alt="Video thumbnail" class="video-stage-img">
+                <div class="video-stage-overlay">
+                    <div class="video-stage-play">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="video-stage-title">Founder &amp; MD Executive Presentation</h3>
+                    <p class="video-stage-sub">Institutional Growth, Quality Governance &amp; Northeast Regional
+                        Expansion</p>
+                </div>
+            </div>
+            <div class="video-footer">
+                <span class="video-footer-name">Dr. James Elangbam, MBBS, DNB &bull; Managing Director</span>
+                <button type="button" class="btn-primary-cta open-termsheet-modal"
+                    style="padding: 8px 18px; font-size: 13px;">Request Term Sheet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
