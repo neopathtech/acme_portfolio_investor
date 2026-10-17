@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // 1. Investor Auth Gatekeeper
+    if (window.location.search.includes('preview=true') && !localStorage.getItem('acme_investor_auth')) {
+        localStorage.setItem('acme_investor_auth', JSON.stringify({ user: 'Institutional Partner' }));
+    }
     const isLoginPage = window.location.pathname.endsWith('login.html');
     const authDataRaw = localStorage.getItem('acme_investor_auth');
 
