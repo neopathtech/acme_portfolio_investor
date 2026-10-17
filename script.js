@@ -35,14 +35,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Scroll-driven chrome: header state, progress bar, back-to-top
+    // User Profile Dropdown Toggle
+    const userAvatarBtn = document.getElementById('user-avatar-btn');
+    const userDropdownMenu = document.getElementById('user-dropdown-menu');
+    const userMenuWrapper = document.getElementById('user-menu-wrapper');
+
+    if (userAvatarBtn && userDropdownMenu) {
+        userAvatarBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = userDropdownMenu.classList.toggle('open');
+            userAvatarBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (userMenuWrapper && !userMenuWrapper.contains(e.target)) {
+                userDropdownMenu.classList.remove('open');
+                userAvatarBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && userDropdownMenu.classList.contains('open')) {
+                userDropdownMenu.classList.remove('open');
+                userAvatarBtn.setAttribute('aria-expanded', 'false');
+                userAvatarBtn.focus();
+            }
+        });
+    }
+
+    // 2. Scroll-driven chrome: header state, smart auto-hide, progress bar, back-to-top
     const header = document.querySelector('.site-header');
     const progressBar = document.getElementById('scroll-progress');
     const backToTop = document.getElementById('back-to-top');
+    let lastScrollY = window.scrollY;
+    const scrollThreshold = 8;
 
     function onScroll() {
         const y = window.scrollY;
-        if (header) header.classList.toggle('scrolled', y > 30);
+        if (header) {
+            header.classList.toggle('scrolled', y > 30);
+
+            // Smart navbar: hide when scrolling down, show when scrolling up
+            const delta = y - lastScrollY;
+            if (y <= 60) {
+                // At top of page: always visible
+                header.classList.remove('header-hidden');
+            } else if (delta > scrollThreshold) {
+                // Scrolling down: hide header
+                header.classList.add('header-hidden');
+                if (userDropdownMenu) userDropdownMenu.classList.remove('open');
+            } else if (delta < -scrollThreshold) {
+                // Scrolling up: show header
+                header.classList.remove('header-hidden');
+            }
+        }
+        lastScrollY = Math.max(0, y);
 
         if (progressBar) {
             const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -349,8 +396,19 @@ document.addEventListener('DOMContentLoaded', () => {
             termSheetModal.classList.remove('active');
             document.body.style.overflow = '';
             termSheetForm.reset();
-
             showToast(`Inquiry received from ${investorName} (${firm}). Confidential Investment Dossier & Term Sheet dispatched.`);
+        });
+    }
+
+    const dataroomInlineForm = document.getElementById('dataroom-inline-form');
+    if (dataroomInlineForm) {
+        dataroomInlineForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const investorName = document.getElementById('dr-name')?.value || 'Investor';
+            const firm = document.getElementById('dr-firm')?.value || 'Firm';
+
+            dataroomInlineForm.reset();
+            showToast(`Meeting request received from ${investorName} (${firm}). Dr. James Elangbam's direct office will connect within 24 hours.`);
         });
     }
 

@@ -25,80 +25,62 @@
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- =========================================================================
-       1. INVESTOR PORTAL TOP BAR & AUTHENTICATION STATE
-       ========================================================================= -->
-    <div class="investor-top-bar">
-        <div class="container investor-bar-inner">
-            <div class="investor-status-tag">
-                <span class="pulse-dot-green"></span>
-                <span><strong>Confidential Data Room:</strong> Institutional Investor &amp; Strategic Partner
-                    Portal</span>
-            </div>
-            <div class="investor-user-info">
-                <span class="investor-badge-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
-                    </svg>
-                    <span id="investor-user-name">Strategic Partner</span>
-                </span>
-                <button type="button" id="logout-btn" class="btn-logout" title="Lock session & return to login gateway">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
-                    </svg>
-                    <span>Exit Session</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- =========================================================================
-       2. MAIN NAVIGATION HEADER
+       MAIN NAVIGATION HEADER & INVESTOR USER STATE
        ========================================================================= -->
     <header class="site-header" id="site-header">
         <div class="container header-inner">
             <a href="#hero" class="brand-identity">
-                <div class="brand-symbol-wrap">
-                    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                        <circle cx="20" cy="20" r="18" stroke="#FFE0D5" stroke-width="2.5" opacity="0.3" />
-                        <path d="M20 9V31M9 20H31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
-                        <circle cx="20" cy="14" r="3" fill="#FFE0D5" />
-                        <path d="M14 26C16 22 24 22 26 26" stroke="#FFE0D5" stroke-width="2.5" stroke-linecap="round" />
-                    </svg>
-                </div>
-                <div class="brand-text-block">
-                    <div class="brand-title-group">
-                        <span class="brand-main-name">acme</span>
-                        <span class="brand-meetei">ꯑꯦꯛꯃꯤ</span>
-                    </div>
-                    <span class="brand-subtitle">Investor Relations &bull; Healthcare Infrastructure</span>
-                </div>
+                <img src="assets/acme_logo.png" alt="ACME Fertility &amp; HealthCare Centre" class="brand-logo-img">
             </a>
 
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#thesis" class="nav-link">Investment Thesis</a></li>
-                    <li><a href="#kpis" class="nav-link">Clinical KPIs</a></li>
-                    <li><a href="#assets" class="nav-link">Infrastructure Assets</a></li>
-                    <li><a href="#roadmap" class="nav-link">Expansion Roadmap</a></li>
-                    <li><a href="#leadership" class="nav-link">Governance</a></li>
-                    <li><a href="#dataroom" class="nav-link">Virtual Data Room</a></li>
+                    <li><a href="#kpis" class="nav-link">KPIs</a></li>
+                    <li><a href="#thesis" class="nav-link">Investment</a></li>
+                    <li><a href="#assets" class="nav-link">Assets</a></li>
+                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                    <li><a href="#leadership" class="nav-link">Founders</a></li>
+                    <li><a href="#dataroom" class="nav-link">Data Room</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <button type="button" class="btn-secondary-cta open-termsheet-modal">
-                    <span>Request Term Sheet</span>
-                </button>
-                <a href="#dataroom" class="btn-primary-cta magnetic">
-                    <span>Data Room</span>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </a>
+                <div class="user-menu-wrapper" id="user-menu-wrapper">
+                    <button type="button" class="user-avatar-btn" id="user-avatar-btn"
+                        aria-label="Open investor profile menu" aria-expanded="false" title="Investor Account">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.3">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </button>
+
+                    <div class="user-dropdown-menu" id="user-dropdown-menu" role="menu">
+                        <div class="user-dropdown-header">
+                            <div class="user-dropdown-avatar">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.3">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </div>
+                            <div class="user-dropdown-info">
+                                <div class="user-name" id="investor-user-name">Strategic Partner</div>
+                                <div class="user-role-label">Verified Investor &bull; Data Room Access</div>
+                            </div>
+                        </div>
+                        <div class="user-dropdown-divider"></div>
+                        <div class="user-dropdown-body">
+                            <button type="button" id="logout-btn" class="dropdown-logout-btn" role="menuitem">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+                                </svg>
+                                <span>Exit Session</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <button type="button" class="mobile-toggle" aria-label="Toggle Menu">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.2">
@@ -110,12 +92,12 @@
 
         <!-- Mobile Navigation Drawer -->
         <div class="site-nav-mobile">
-            <a href="#thesis" class="nav-link">Investment Thesis</a>
-            <a href="#kpis" class="nav-link">Clinical KPIs</a>
-            <a href="#assets" class="nav-link">Infrastructure Assets</a>
-            <a href="#roadmap" class="nav-link">Expansion Roadmap</a>
-            <a href="#leadership" class="nav-link">Governance</a>
-            <a href="#dataroom" class="nav-link">Virtual Data Room</a>
+            <a href="#kpis" class="nav-link">KPIs</a>
+            <a href="#thesis" class="nav-link">Investment</a>
+            <a href="#assets" class="nav-link">Assets</a>
+            <a href="#roadmap" class="nav-link">Roadmap</a>
+            <a href="#leadership" class="nav-link">Founders</a>
+            <a href="#dataroom" class="nav-link">Data Room</a>
             <button type="button" class="btn-primary-cta open-termsheet-modal"
                 style="width: 100%; justify-content: center;">Request Term Sheet</button>
         </div>
@@ -124,31 +106,19 @@
     <!-- =========================================================================
        3. IMAGE-DOMINANT HERO SECTION FOR INVESTORS
        ========================================================================= -->
-    <section class="hero-section" id="hero">
-        <div class="hero-ambient" aria-hidden="true">
-            <span class="blob blob-1"></span>
-            <span class="blob blob-2"></span>
-            <span class="blob blob-3"></span>
+    <section class="hero-section hero-has-bg" id="hero">
+        <div class="hero-bg-layer" aria-hidden="true">
+            <img src="assets/building.jpg" alt="ACME Fertility and Healthcare Centre Building" class="hero-bg-img">
+            <div class="hero-bg-overlay"></div>
         </div>
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-grid">
                 <!-- Hero Text & Investment Case -->
                 <div class="hero-content">
-                    <div class="hero-badge-strip reveal">
-                        <span class="badge-tag highlight">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            Manyata Certified · FOGSI Benchmark
-                        </span>
-                        <span class="badge-tag">Prime Healthcare Real Estate · Imphal East</span>
-                    </div>
-
-                    <h1 class="hero-title reveal" data-delay="80">
-                        Pioneering reproductive medicine in Northeast India with <span class="accent">sustainable
-                            clinical &amp; financial excellence</span>
+                    <h1 class="hero-title reveal">
+                        <span class="hero-title-line">Pioneering reproductive medicine</span>
+                        <span class="hero-title-line">in Northeast India with</span>
+                        <span class="accent">sustainable clinical &amp; financial excellence</span>
                     </h1>
 
                     <p class="hero-description reveal" data-delay="160">
@@ -157,118 +127,6 @@
                         bio-banking, and Manyata national accreditation into a highly profitable, scalable clinical
                         ecosystem.
                     </p>
-
-                    <div class="hero-actions reveal" data-delay="240">
-                        <button type="button" class="btn-hero-primary magnetic open-termsheet-modal">
-                            <span>Request Investment Memorandum</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                        <a href="#dataroom" class="btn-hero-secondary">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                <polyline points="14 2 14 8 20 8" />
-                            </svg>
-                            <span>Explore Data Room</span>
-                        </a>
-                    </div>
-
-                    <div class="hero-cred-bar reveal" data-delay="320">
-                        <div class="cred-item">
-                            <div class="cred-item-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                            </div>
-                            <span>10+ Years Operational Track Record</span>
-                        </div>
-                        <div class="cred-item">
-                            <div class="cred-item-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                </svg>
-                            </div>
-                            <span>ART (Regulation) Act 2021 Compliant</span>
-                        </div>
-                        <div class="cred-item">
-                            <div class="cred-item-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M12 6v6l4 2" />
-                                </svg>
-                            </div>
-                            <span>Zero Long-Term Debt on Core Building</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image-Dominant Infrastructure Showcase -->
-                <div class="hero-visual-showcase reveal" data-delay="200">
-                    <!-- Main Card -->
-                    <div class="hero-main-card" id="hero-main-card">
-                        <img id="hero-main-img" src="assets/ivf and infertility complex.jpg"
-                            alt="ACME Fertility & Infertility Complex in Imphal">
-                        <div class="hero-card-overlay">
-                            <span class="hero-overlay-tag">Asset Profile: Freehold Healthcare Real Estate</span>
-                            <h2 class="hero-overlay-caption" id="hero-main-caption">4-Storey Specialized Reproductive
-                                Facility, Palace Compound</h2>
-                        </div>
-                        <div class="hero-card-shine" aria-hidden="true"></div>
-                    </div>
-
-                    <!-- Floating Glass Badge 1: Manyata Certificate -->
-                    <div class="floating-glass-card top-right cert-trigger" style="cursor: pointer;"
-                        title="Inspect Manyata Certificate">
-                        <img src="assets/Manyata-Certificate_1.webp" alt="Manyata Certificate"
-                            class="cert-mini-preview">
-                        <div>
-                            <div class="float-stat-number" style="font-size: 16px; color: var(--accent);">Manyata
-                                Certified</div>
-                            <div class="float-stat-label">FOGSI Quality Standards &bull; Click to audit</div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Glass Badge 2: Key Operational Metric -->
-                    <div class="floating-glass-card bottom-left">
-                        <div class="float-stat-ring">
-                            <svg viewBox="0 0 44 44" class="ring-svg" aria-hidden="true">
-                                <circle cx="22" cy="22" r="19" class="ring-track" />
-                                <circle cx="22" cy="22" r="19" class="ring-fill" id="ring-fill" />
-                            </svg>
-                            <span>84.6%</span>
-                        </div>
-                        <div>
-                            <div class="float-stat-number">Endoscopic Ratio</div>
-                            <div class="float-stat-label">1,196 of 1,414 Surgeries Minimally Invasive</div>
-                        </div>
-                    </div>
-
-                    <!-- Interactive Switcher Thumbnails Strip -->
-                    <div class="hero-thumb-strip">
-                        <div class="hero-thumb-item active" data-src="assets/ivf and infertility complex.jpg"
-                            data-caption="4-Storey Specialized Reproductive Facility, Palace Compound">
-                            <img src="assets/ivf and infertility complex.jpg" alt="Complex">
-                        </div>
-                        <div class="hero-thumb-item" data-src="assets/ivf lab.jpg"
-                            data-caption="Class 10,000 Cleanroom Embryology Laboratory">
-                            <img src="assets/ivf lab.jpg" alt="IVF Lab">
-                        </div>
-                        <div class="hero-thumb-item" data-src="assets/operation theatre 1.jpg"
-                            data-caption="Class 100 Modular Laminar-Flow Operation Theatre 1">
-                            <img src="assets/operation theatre 1.jpg" alt="Operation Theatre">
-                        </div>
-                        <div class="hero-thumb-item" data-src="assets/cryobank.jpg"
-                            data-caption="Liquid Nitrogen Cryobank & Vitrification Storage Vault">
-                            <img src="assets/cryobank.jpg" alt="Cryobank">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -336,7 +194,7 @@
                         stroke-width="2.2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
-                    <span>Institutional Insurance Partners &bull; Cashless Desk</span>
+                    <span>Insurance Partners</span>
                 </div>
                 <div class="insurance-marquee">
                     <div class="insurance-marquee-track">
@@ -451,18 +309,6 @@
                         clinical machinery, and operational assets located at our facility in Palace Compound, Imphal
                         East.</p>
                 </div>
-                <button type="button" class="btn-primary-cta open-termsheet-modal reveal" data-delay="240">
-                    <span>Request Asset Register &amp; Cap Table</span>
-                </button>
-            </div>
-
-            <!-- Asset Filters -->
-            <div class="asset-filters reveal" data-delay="120">
-                <button type="button" class="filter-btn active" data-filter="all">All Capital Assets (8)</button>
-                <button type="button" class="filter-btn" data-filter="embryo">Embryology &amp; Cryo</button>
-                <button type="button" class="filter-btn" data-filter="surgical">Surgical Theatres</button>
-                <button type="button" class="filter-btn" data-filter="inpatient">Inpatient &amp; Recovery</button>
-                <button type="button" class="filter-btn" data-filter="critical">ICU &amp; Emergency</button>
             </div>
 
             <!-- Assets Gallery Grid -->
@@ -576,7 +422,7 @@
 
                 <!-- Asset 8: Central Reception & OPD Bays -->
                 <div class="facility-card reveal" data-delay="240" data-category="inpatient">
-                    <img src="assets/header.jpg" alt="Hospital Reception and Entrance">
+                    <img src="assets/building.jpg" alt="Hospital Reception and Entrance">
                     <div class="facility-overlay">
                         <h3 class="facility-title">Central Reception &amp; OPD</h3>
                         <span class="facility-meta">Digital Patient Registration &bull; TPA Insurance Desk</span>
@@ -667,9 +513,6 @@
                     <p class="section-desc reveal" data-delay="160">Managed by seasoned clinician-founders combining
                         deep local authority, surgical mastery, and adherence to national governance standards.</p>
                 </div>
-                <button type="button" class="btn-primary-cta open-termsheet-modal reveal" data-delay="240">
-                    <span>Schedule Director Meeting</span>
-                </button>
             </div>
 
             <div class="leadership-grid">
@@ -892,18 +735,52 @@
                     <p class="dataroom-form-sub">Direct line to Dr. James Elangbam and our institutional transaction
                         advisors.</p>
 
-                    <button type="button" class="btn-primary-cta open-termsheet-modal"
-                        style="width: 100%; justify-content: center; padding: 14px;">
-                        <span>Open Investment Inquiry Form</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                    <form id="dataroom-inline-form">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label class="form-label" for="dr-name">Principal Investor *</label>
+                                <input type="text" id="dr-name" class="form-input" placeholder="e.g. Anand Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="dr-firm">Fund / Entity *</label>
+                                <input type="text" id="dr-firm" class="form-input" placeholder="e.g. Apex Health Ventures" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label class="form-label" for="dr-email">Institutional Email *</label>
+                                <input type="email" id="dr-email" class="form-input" placeholder="partner@fund.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="dr-phone">Phone / WhatsApp *</label>
+                                <input type="tel" id="dr-phone" class="form-input" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="dr-type">Partnership Structure</label>
+                            <select id="dr-type" class="form-select">
+                                <option value="Growth Capital / Equity">Growth Capital / Equity</option>
+                                <option value="Debt / Equipment Financing">Debt / Equipment Financing</option>
+                                <option value="Strategic Clinical Syndicate">Strategic Clinical Syndicate</option>
+                                <option value="Satellite Center Joint Venture">Satellite Hub JV</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="dr-notes">Proposed Check Size &amp; Timelines (Optional)</label>
+                            <textarea id="dr-notes" class="form-textarea" placeholder="Target ticket size, due diligence schedule..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn" style="margin-top: 6px;">
+                            <span>Submit Direct Meeting Request</span>
+                        </button>
+                    </form>
 
                     <div class="dataroom-contact">
                         Direct Office: <a href="tel:+916909158069">+91 69091 58069</a> &bull;
-                        contact@acmefertilitycentre.com
+                        <a href="mailto:contact@acmefertilitycentre.com">contact@acmefertilitycentre.com</a>
                     </div>
                 </div>
             </div>
@@ -918,19 +795,14 @@
             <div class="footer-top-grid">
                 <!-- Col 1 -->
                 <div>
-                    <div class="brand-identity" style="filter: brightness(1.2);">
-                        <div class="brand-symbol-wrap" style="background: rgba(255,255,255,0.15);">
-                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-                                <circle cx="20" cy="20" r="18" stroke="#FFE0D5" stroke-width="2.5" opacity="0.4" />
-                                <path d="M20 9V31M9 20H31" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
-                            </svg>
+                    <div class="brand-identity footer-brand">
+                        <div class="footer-logo-card">
+                            <img src="assets/acme_logo.png" alt="ACME Fertility &amp; HealthCare Centre"
+                                class="footer-logo-img">
                         </div>
                         <div class="brand-text-block">
-                            <div class="brand-title-group">
-                                <span class="brand-main-name" style="color: #FFFFFF;">acme</span>
-                                <span class="brand-meetei" style="color: #F2B8A2;">ꯑꯦꯛꯃꯤ</span>
-                            </div>
-                            <span class="brand-subtitle" style="color: #CFE3DF;">Investor Relations</span>
+                            <span class="brand-subtitle" style="color: #CFE3DF;">Investor Relations &bull;
+                                Manipur</span>
                         </div>
                     </div>
                     <p class="footer-brand-desc">
